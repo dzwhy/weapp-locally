@@ -1,0 +1,31 @@
+<include src="/includes/search-bar.wxml"/>
+
+<view class="cells">
+  <navigator class="item" wx:for="{{shops}}" wx:key="id" url="/pages/detail/detail?item={{item.id}}">
+    <image src="{{item.images[0]}}" mode="aspectFill"/>
+    <view class="meta">
+      <text class="name">{{item.name}}</text>
+      <text class="phone">电话：{{item.phone || 'none'}}</text>
+      <text class="address">地址：{{item.address}}</text>
+      <text class="hours">营业时间：{{item.businessHours}}</text>
+    </view>
+    <view class="score">{{item.score || 'none'}}</view>
+  </navigator>
+</view>
+
+<view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">没有更多内容了</view>
+
+
+<!-- <view class="cells">
+   <navigator class="item" url="/pages/detail/detail?item=16" role="navigation">
+      <image src="http://p0.meituan.net/mogu/ada0c9d6786bb4815a2cd87ae2d8ccb286766.jpg" mode="aspectFill" role="img"></image>
+      <view class="meta">
+         <text class="name">麦瑞蜜摄影机构</text>
+         <text class="phone">电话：400-090-8621-38286</text>
+         <text class="address">地址：运河区水月寺南大街好伦哥斜对面</text>
+         <text class="hours">营业时间：周一至周日08:30-20:00</text>
+      </view>
+      <view class="score">80</view>
+   </navigator>
+</view> -->

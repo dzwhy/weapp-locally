@@ -1,0 +1,56 @@
+/**index.wxss**/
+.slides{
+   height: 380rpx;
+}
+.slides navigator,.slides image{
+   width: 100%;
+   height: 100%;
+}
+
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1rpx solid #eee;
+  border-left: 1rpx solid #eee;
+  background-color: #fff;
+}
+
+.grids .item {
+  display: flex;
+  /* 改变每个小图标方块 主轴从上往下进行排列（默认是从左到右进行排列） */
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  /* width: 33.3333333333%; */
+  /* 分配每个小图标方块的宽度 一行排列三个 即整屏750rpx 的三分之一 即250rpx*/
+  /* 或者是width: 33.3333333333% */
+  width: 249rpx;
+  height: 250rpx;
+  border-right: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+
+.grids .item image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.grids .item text {
+  margin-top: 20rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 0;
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.links image {
+  width: 330rpx;
+  height: 185rpx;
+}
